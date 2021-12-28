@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".EditTodoFragment"
+    android:background="@drawable/todo_background">
+
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_fragment_txt_name"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/edit_title"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="24sp" />
+
+
+            <CheckBox
+                android:id="@+id/edit_fragment_chk_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_borders"
+                android:text="Completed"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_fragment_txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/edit_date"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <TextView
+                android:id="@+id/priority_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/priority"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/edit_fragment_rg_priority"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_design"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/edit_fragment_rb_high"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/edit_high"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:buttonTint="@color/bgColorFab" />
+
+                <RadioButton
+                    android:id="@+id/edit_fragment_rb_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/edit_medium"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:buttonTint="#FFE608" />
+
+                <RadioButton
+                    android:id="@+id/edit_fragment_rb_low"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/edit_low"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:buttonTint="@color/color_low" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/edit_fragment_btn_save"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_design"
+                    android:text="@string/edit_save" />
+
+                <Button
+                    android:id="@+id/edit_fragment_btn_cancel"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_design"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
